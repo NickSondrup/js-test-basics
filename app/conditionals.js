@@ -2,7 +2,10 @@
 
 function largerNum(num1, num2) {
     // you code here
-
+    if(num1 > num2){
+        return num1
+    }
+    else{return num2}
 }
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
@@ -14,7 +17,12 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
-
+    let grade = score / possible
+    if(grade >= .9){return "A"}
+    if(grade >= .8){return "B"}
+    if(grade >= .7){return "C"}
+    if(grade >= .6){return "D"}
+    if(grade <= .59){return "F"}
 }
 
 
@@ -30,11 +38,19 @@ function testGrader(score, possible) {
 
 function timeOfDayGreeting(hour) {
     // you code below
+if(hour <= 4){return "good night"}
+else if(hour <= 11){return "good morning"}
+else if(hour <= 17){return "good afternoon"}
+else if(hour <= 21){return "Good Evening"}
+else if(hour <= 24){return "good night"}
 
 }
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
+    if(temp <= 98.6){return "no fever"}
+    else if(temp <= 102){return "fever"}
+    else if(temp >= 103){return "fever go to hospital"}
 
 }
 
@@ -47,7 +63,12 @@ let myCar = {
 }
 
 function isStopped(car) {
-
+if(car.moving == false){
+    return true
+}
+else if(car.moving == true){
+    return false
+}
 }
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
@@ -58,5 +79,8 @@ let dish = {
 }
 
 function washDish(dish) {
+    if (dish.yourDish == false){return false}
+    else if(dish.isDirty == false){return false}
+    else {return true}
 
 }
