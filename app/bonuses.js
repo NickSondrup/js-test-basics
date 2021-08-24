@@ -2,6 +2,8 @@
 let str = "team number 2"
 
 function camelCase(str) {
-toUpperCase(str.charAt(0))
+str.charAt(4) = undefined
+str.charAt(11) = undefined
 console.log(str)
+
 }

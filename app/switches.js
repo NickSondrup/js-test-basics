@@ -29,7 +29,7 @@ function daysPosition(day, offset) {
  function golfScore(score, par) {
     switch(score-par){
         case -3:
-            return "Ace";
+            return "Ace"   
         case -2:
             return "Eagle";
         case -1:
@@ -67,40 +67,53 @@ function daysPosition(day, offset) {
 let count = 0
 
 function cardCounter(card) {
+    switch(card){
+        case '2': 
+        count += 1
+        break;
+        case '3': 
+        count += 1
+        break;
+        case '4': 
+        count += 1
+        break;
+        case '5': 
+        count += 1
+        break;
+        case '6': 
+        count += 1
+        break;
+        case '7': 
+        count += 0
+        break;
+        case '8': 
+        count += 0
+        break;
+        case '9': 
+        count += 0
+        break;
+        case '10': 
+        count -= 1
+        break;
+        case 'J': 
+        count -= 1
+        break;
+        case 'Q': 
+        count -= 1
+        break;
+        case 'K': 
+        count -= 1
+        break;
+        case 'A': 
+        count -= 1
+        break;
+    }
     if (count > 0){
         return count+'Bet'
     } 
     if (count <= 0) {
-
+    
         return count+'Hold'
         
-    }
-    switch(card){
-        case '2': 
-            count += 1;
-        case '3': 
-            count += 1;
-        case '4': 
-            count += 1;
-        case '5': 
-            count += 1;
-        case '6': 
-            count += 1;
-        case '7': 
-            count += 0;
-        case '8': 
-            count += 0;
-        case '9': 
-            count += 0;
-        case '10': 
-            count -= 1;
-        case 'J': 
-            count -= 1;
-        case 'Q': 
-            count -= 1;
-        case 'K': 
-            count -= 1;
-        case 'A': 
-            count -= 1;
     }
 }
